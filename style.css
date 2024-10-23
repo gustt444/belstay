@@ -129,6 +129,45 @@ header ul li a {
 
 /*--------------header--------*/
 /*--------------home--------*/
+/* Exemplo de CSS para dispositivos móveis */
+@media (max-width: 768px) {
+  .home .head_container {
+    flex-direction: column; /* Alinha os itens verticalmente */
+    text-align: center; /* Centraliza o texto */
+  }
+
+  .home .text {
+    margin-bottom: 20px; /* Espaço entre o texto e a imagem */
+  }
+
+  .image {
+    width: 100%; /* Imagem ocupa toda a largura */
+  }
+
+  .image_item img {
+    width: 50px; /* Ajusta o tamanho das imagens menores */
+    margin: 0 5px; /* Espaço entre as miniaturas */
+  }
+
+  .book .container {
+    flex-direction: column; /* Coloca os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+  }
+
+  .input.grid {
+    width: 100%; /* Para que ocupe toda a largura */
+  }
+
+  .input.grid .box {
+    margin-bottom: 15px; /* Espaçamento entre as caixas */
+  }
+
+  .about .container {
+    flex-direction: column; /* Alinha os itens verticalmente */
+  }
+}
+
+
 .home .image img {
   position: absolute;
   top: 0;
