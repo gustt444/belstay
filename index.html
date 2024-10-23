@@ -1,519 +1,306 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <title>Hotel Website</title>
+<html lang="pt" dir="ltr">
+<head>
+    <title>Acomodações - Belstay</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+</head>
 
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css"
-      integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-      integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <script>
-      src="https://code.jquery.com/jquery-1.12.4.min.js"
-      integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
-      crossorigin="anonymous"
-    ></script>
-  </head>
 <header class="header" id="navigation-menu">
-  <div class="container">
-    <nav>
-      <a href="#" class="logo"> <img src="image/logo.png" alt="" /> </a>
-
-      <ul class="nav-menu">
-        <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#sobre" class="nav-link">Sobre</a></li>
-        <li><a href="#quarto" class="nav-link">Quartos</a></li>
-        <li><a href="#restaurant" class="nav-link">Restaurante</a></li>
-        <li><a href="#gallary" class="nav-link">Galeria</a></li>
-        <li><a href="#contato" class="nav-link">Contato</a></li>
-        <li><a href="login.html" class="nav-link">Login</a></li>
-      </ul>
-
-      <div class="hambuger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </div>
-    </nav>
-  </div>
+    <div class="container">
+        <nav>
+            <a href="#" class="logo"> <img src="image/logo.png" alt="" /> </a>
+            <ul class="nav-menu">
+                <li><a href="#" class="nav-link">Início</a></li>
+                <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                <li><a href="#quarto" class="nav-link">Acomodações</a></li>
+                <li><a href="#restaurant" class="nav-link">Restaurante</a></li>
+                <li><a href="#gallary" class="nav-link">Galeria</a></li>
+                <li><a href="#contato" class="nav-link">Contato</a></li>
+                <li><a href="login.html" class="nav-link">Login</a></li>
+            </ul>
+            <div class="hambuger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </div>
 </header>
-  <body>
-   
+
+<body>
+    <section class="home" id="home">
+        <div class="head_container">
+            <div class="box">
+                <div class="text">
+                    <h1>Bem-vindo ao Belstay</h1>
+                    <p>Descubra o seu próximo destino perfeito com a gente.</p>
+                    <button>SAIBA MAIS</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="image/home1.jpg" class="slide" />
+            </div>
+            <div class="image_item">
+                <img src="image/home1.jpg" class="slide active" onclick="img('image/home1.jpg')" />
+                <img src="image/home2.jpg" class="slide" onclick="img('image/home2.jpg')" />
+                <img src="image/home3.jpg" class="slide" onclick="img('image/home3.jpg')" />
+                <img src="image/home4.jpg" class="slide" onclick="img('image/home4.jpg')" />
+            </div>
+        </div>
+    </section>
 
     <script>
-      const hambuger = document.querySelector(".hambuger");
-      const navMenu = document.querySelector(".nav-menu");
-
-      hambuger.addEventListener("click", mobileMenu);
-
-      function mobileMenu() {
-        hambuger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-      }
-
-      const navLink = document.querySelectorAll(".nav-link");
-      navLink.forEach((n) => n.addEventListener("click", closeMenu));
-
-      function closeMenu() {
-        hambuger.classList.remove("active");
-        navMenu.classList.remove("active");
-      }
+        function img(anything) {
+            document.querySelector(".slide").src = anything;
+        }
     </script>
 
-  <section class="home" id="home">
-  <div class="head_container">
-    <div class="box">
-      <div class="text">
-        <h1>Olá. Belstay. Olá</h1>
-        <p>Lorem ipsum dolor sit amet...</p>
-        <button>MAIS INFO</button>
-      </div>
-    </div>
-    <div class="image">
-      <img src="image/home1.jpg" class="slide" />
-    </div>
-    <div class="image_item">
-      <img src="image/home1.jpg" class="slide active" onclick="img('image/home1.jpg')" />
-      <img src="image/home2.jpg" class="slide" onclick="img('image/home2.jpg')" />
-      <img src="image/home3.jpg" class="slide" onclick="img('image/home3.jpg')" />
-      <img src="image/home4.jpg" class="slide" onclick="img('image/home4.jpg')" />
-    </div>
-  </div>
-</section>
-
-    <script>
-      function img(anything) {
-        document.querySelector(".slide").src = anything;
-      }
-
-      function change(change) {
-        const line = document.querySelector(".image");
-        line.style.background = change;
-      }
-    </script>
     <section class="book">
-      <div class="container flex">
-        <div class="input grid">
-          <div class="box">
-            <label>Check-in:</label>
-            <input type="date" placeholder="Check-in-Date" />
-          </div>
-          <div class="box">
-            <label>Check-out:</label>
-            <input type="date" placeholder="Check-out-Date" />
-          </div>
-          <div class="box">
-            <label>Adutos:</label> <br />
-            <input type="number" placeholder="0" />
-          </div>
-          <div class="box">
-            <label>Crianças:</label> <br />
-            <input type="number" placeholder="0" />
-          </div>
+        <div class="container flex">
+            <div class="input grid">
+                <div class="box">
+                    <label>Check-in:</label>
+                    <input type="date" placeholder="Data de Check-in" />
+                </div>
+                <div class="box">
+                    <label>Check-out:</label>
+                    <input type="date" placeholder="Data de Check-out" />
+                </div>
+                <div class="box">
+                    <label>Adultos:</label> <br />
+                    <input type="number" placeholder="0" />
+                </div>
+                <div class="box">
+                    <label>Crianças:</label> <br />
+                    <input type="number" placeholder="0" />
+                </div>
+            </div>
+            <div class="search">
+                <button>Procurar</button>
+            </div>
         </div>
-        <div class="search">
-          <button>Procurar</button>
-        </div>
-      </div>
     </section>
+
     <section class="about top" id="sobre">
-      <div class="container flex">
-        <div class="left">
-          <div class="img">
-            <img src="image/a1.jpg" alt="" class="image1" />
-            <img src="image/a2.jpg" alt="" class="image2" />
-          </div>
+        <div class="container flex">
+            <div class="left">
+                <div class="img">
+                    <img src="image/a1.jpg" alt="" class="image1" />
+                    <img src="image/a2.jpg" alt="" class="image2" />
+                </div>
+            </div>
+            <div class="right">
+                <div class="heading">
+                    <h5>CONFORTO E QUALIDADE EM CADA DETALHE</h5>
+                    <h2>Bem-vindo ao Belstay Resort</h2>
+                    <p>
+                        Em Belstay, oferecemos acomodações únicas que fazem você se sentir em casa, onde quer que esteja.
+                    </p>
+                    <p>
+                        Nossa missão é garantir que sua estadia seja inesquecível, com atenção aos detalhes e um serviço excepcional.
+                    </p>
+                    <button class="btn1">SAIBA MAIS</button>
+                </div>
+            </div>
         </div>
-        <div class="right">
-          <div class="heading">
-            <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
-            <h2>Bem-vindos a Belstay Hotel Risorte</h2>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-            <p>
-              Duis aute irure dolor in reprehenderit in voluptate velit esse
-              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-              cupidatat non proident, sunt in culpa qui officia deserunt mollit
-              anim id est laborum.
-            </p>
-            <button class="btn1">SAIBA MAIS</button>
-          </div>
-        </div>
-      </div>
     </section>
+
     <section class="wrapper top">
-      <div class="container">
-        <div class="text">
-          <h2>Nossas comodidades</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-
-          <div class="content">
-            <div class="box flex">
-              <i class="fas fa-swimming-pool"></i>
-              <span>Piscina de natação</span>
+        <div class="container">
+            <div class="text">
+                <h2>Nossas comodidades</h2>
+                <p>
+                    Aproveite uma variedade de serviços que garantem o seu conforto e lazer durante a estadia.
+                </p>
+                <div class="content">
+                    <div class="box flex">
+                        <i class="fas fa-swimming-pool"></i>
+                        <span>Piscina de natação</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-dumbbell"></i>
+                        <span>Academia & Yoga</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-spa"></i>
+                        <span>Spa & Massagem</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-ship"></i>
+                        <span>Passeios de barco</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-swimmer"></i>
+                        <span>Aulas de surf</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-microphone"></i>
+                        <span>Sala de conferências</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-water"></i>
+                        <span>Mergulho e Snorkeling</span>
+                    </div>
+                    <div class="box flex">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>Praia Privativa</span>
+                    </div>
+                </div>
             </div>
-            <div class="box flex">
-              <i class="fas fa-dumbbell"></i>
-              <span>Academia & yoga</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-spa"></i>
-              <span>Spa & massagem</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-ship"></i>
-              <span>Passeios de barco</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-swimmer"></i>
-              <span>Aulas de surf</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-microphone"></i>
-              <span>Conference room</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-water"></i>
-              <span>Mergulho e snorkeling</span>
-            </div>
-            <div class="box flex">
-              <i class="fas fa-umbrella-beach"></i>
-              <span>Praia privada</span>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
+
     <section class="room top" id="quarto">
-      <div class="container">
-        <div class="heading_top flex1">
-          <div class="heading">
-            <h5>ELEVANDO O CONFORTO AO NÍVEL MAIS ALTO</h5>
-            <h2>Quartos R$ Suítes</h2>
-          </div>
-          <div class="button">
-            <button class="btn1">Visualizar tudo</button>
-          </div>
-        </div>
+        <div class="container">
+            <div class="heading_top flex1">
+                <div class="heading">
+                    <h5>DESCUBRA NOSSAS ACOMODAÇÕES EXCLUSIVAS</h5>
+                    <h2>Acomodações e Suítes</h2>
+                </div>
+                <div class="button">
+                    <button class="btn1">Visualizar tudo</button>
+                </div>
+            </div>
 
-        <div class="content grid">
-          <div class="box">
-            <div class="img">
-              <img src="image/r1.jpg" alt="" />
+            <div class="content grid">
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r1.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Hotel Ver o Peso</h3>
+                        <p><span>R$</span>179 <span>/Por noite</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r2.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Hostel Verdinho</h3>
+                        <p><span>R$</span>99 <span>/Por noite</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r3.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Suíte Verdejante</h3>
+                        <p><span>R$</span>299 <span>/Por noite</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r4.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Pousada Oásis</h3>
+                        <p><span>R$</span>149 <span>/Por noite</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r5.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Chalé das Flores</h3>
+                        <p><span>R$</span>349 <span>/Por noite</span></p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="img">
+                        <img src="image/r6.jpg" alt="" />
+                    </div>
+                    <div class="text">
+                        <h3>Hotel Montanha Verde</h3>
+                        <p><span>R$</span>399 <span>/Por noite</span></p>
+                    </div>
+                </div>
             </div>
-            <div class="text">
-              <h3>Quartos Superiores</h3>
-              <p><span>R$</span>129 <span>/Por noite</span></p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/r2.jpg" alt="" />
-            </div>
-            <div class="text">
-              <h3>Quartos Superiores</h3>
-              <p><span>R$</span>129 <span>/Por noite</span></p>
-            </div>
-          </div>
-          <div class="box">
-            <div class="img">
-              <img src="image/r3.jpg" alt="" />
-            </div>
-            <div class="text">
-              <h3>Quartos SuperioreS</h3>
-              <p><span>R$</span>129 <span>/Por noite</span></p>
-            </div>
-          </div>
         </div>
-      </div>
     </section>
-    <section class="wrapper wrapper2 top">
-      <div class="container">
-        <div class="text">
-          <div class="heading">
-            <h5>NO CENTRO DA COMUNICAÇÃO</h5>
-            <h2>Pessoas dizem</h2>
-          </div>
 
-          <div class="para">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-
-            <div class="box flex">
-              <div class="img">
-                <img src="image/c.jpg" alt="" />
-              </div>
-              <div class="name">
-                <h5>FERNANDA SOUZA</h5>
-                <h5>IDAHO</h5>
-              </div>
+    <section class="gallery top" id="gallary">
+        <div class="container">
+            <div class="heading">
+                <h5>VEJA O QUE NOSSOS HÓSPEDES DIZEM</h5>
+                <h2>Nossa Galeria</h2>
             </div>
-          </div>
+            <div class="content">
+                <div class="box">
+                    <img src="image/g1.jpg" alt="" />
+                </div>
+                <div class="box">
+                    <img src="image/g2.jpg" alt="" />
+                </div>
+                <div class="box">
+                    <img src="image/g3.jpg" alt="" />
+                </div>
+                <div class="box">
+                    <img src="image/g4.jpg" alt="" />
+                </div>
+            </div>
         </div>
-      </div>
     </section>
 
     <section class="restaurant top" id="restaurant">
-      <div class="container flex">
-        <div class="left">
-          <img src="image/re.jpg" alt="" />
-        </div>
-        <div class="right">
-          <div class="text">
-            <h2>Nosso Restaurante</h2>
-            <p>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          <div class="accordionWrapper">
-            <div class="accordionItem open">
-              <h2 class="accordionIHeading">Cozinha Italiana</h2>
-              <div class="accordionItemContent">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
+        <div class="container">
+            <div class="heading">
+                <h5>DESFRUTE DE UMA EXPERIÊNCIA GASTRONÔMICA ÚNICA</h5>
+                <h2>Nosso Restaurante</h2>
             </div>
-            <div class="accordionItem close">
-              <h2 class="accordionIHeading">Cozinha Mexicana</h2>
-              <div class="accordionItemContent">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
+            <div class="content flex">
+                <div class="box">
+                    <img src="image/r1.jpg" alt="" />
+                    <h3>Pratos da Terra</h3>
+                    <p>Experimente o melhor da culinária local com ingredientes frescos e sazonais.</p>
+                </div>
+                <div class="box">
+                    <img src="image/r2.jpg" alt="" />
+                    <h3>Sabor do Mar</h3>
+                    <p>Delicie-se com frutos do mar frescos, preparados de forma única.</p>
+                </div>
+                <div class="box">
+                    <img src="image/r3.jpg" alt="" />
+                    <h3>Doces & Sobremesas</h3>
+                    <p>Finalize sua refeição com nossas sobremesas feitas à mão, irresistíveis!</p>
+                </div>
             </div>
-            <div class="accordionItem close">
-              <h2 class="accordionIHeading">Cozinha Italiana</h2>
-              <div class="accordionItemContent">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-            <div class="accordionItem close">
-              <h2 class="accordionIHeading">Cozinha Mexicana</h2>
-              <div class="accordionItemContent">
-                <p>
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <script>
-      var accItem = document.getElementsByClassName("accordionItem");
-      var accHD = document.getElementsByClassName("accordionIHeading");
-
-      for (i = 0; i < accHD.length; i++) {
-        accHD[i].addEventListener("click", toggleItem, false);
-      }
-
-      function toggleItem() {
-        var itemClass = this.parentNode.className;
-        for (var i = 0; i < accItem.length; i++) {
-          accItem[i].className = "accordionItem close";
-        }
-        if (itemClass == "accordionItem close") {
-          this.parentNode.className = "accordionItem open";
-        }
-      }
-    </script>
-
-    <section class="gallary mtop" id="gallary">
-      <div class="container">
-        <div class="heading_top flex1">
-          <div class="heading">
-            <h5>Bem-vindos a nossa galeria de fotos</h5>
-            <h2>Galeria de fotos do nosso hotel</h2>
-          </div>
-          <div class="button">
-            <button class="btn1">VISUALIZAR GALERIA</button>
-          </div>
-        </div>
-
-        <div class="owl-carousel owl-theme">
-          <div class="item">
-            <img src="image/g1.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g2.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g3.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g4.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g5.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g6.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g7.jpg" alt="" />
-          </div>
-          <div class="item">
-            <img src="image/g8.jpg" alt="" />
-          </div>
-        </div>
-      </div>
     </section>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js"
-      integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
-      integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script>
-      $(".owl-carousel").owlCarousel({
-        loop: true,
-        margin: 10,
-        nav: true,
-        dots: false,
-        navText: [
-          "<i class='fas fa-chevron-left'></i>",
-          "<i class='fas fa-chevron-right'></i>",
-        ],
-        responsive: {
-          0: {
-            items: 1,
-          },
-          768: {
-            items: 2,
-          },
-          1000: {
-            items: 4,
-          },
-        },
-      });
-    </script>
-
-    <section class="map top">
-    <iframe
-  src="https://www.openstreetmap.org/export/embed.html?bbox=-48.5093%2C-1.4625%2C-48.4911%2C-1.4484&layer=mapnik&marker=-1.4553%2C-48.5002"
-  width="600"
-  height="450"
-  style="border: 1px solid black;"></iframe>
-
-    </section>
-
-    <footer id="contato">
-      <div class="container grid top">
-        <div class="box">
-          <img
-            src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-hotel-hotel-services-and-city-elements-flatart-icons-flat-flatarticons-1.png"
-          />
-          <p>
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt mollit anim id est laborum.
-          </p>
-
-          <p>Métodos de pagamento aceitos</p>
-          <div class="payment grid">
-            <a href="#"
-              ><img src="https://img.icons8.com/color/48/000000/visa.png"
-            /></a>
-            <a href="#"
-              ><img src="https://img.icons8.com/color/48/000000/mastercard.png"
-            /></a>
-            <a href="#"
-              ><img
-                src="https://img.icons8.com/color-glass/48/000000/paypal.png"
-            /></a>
-            <a href="#"
-              ><img src="https://img.icons8.com/fluency/48/000000/amex.png"
-            /></a>
-          </div>
+    <footer class="footer" id="contato">
+        <div class="container">
+            <div class="top flex">
+                <div class="box">
+                    <h2>Entre em contato</h2>
+                    <p>Tem alguma dúvida? Fale conosco!</p>
+                    <form>
+                        <input type="text" placeholder="Seu nome" />
+                        <input type="email" placeholder="Seu e-mail" />
+                        <textarea placeholder="Sua mensagem"></textarea>
+                        <button class="btn1">Enviar</button>
+                    </form>
+                </div>
+                <div class="box">
+                    <h2>Informações</h2>
+                    <p><i class="fas fa-map-marker-alt"></i> Endereço: Rua Exemplo, 123 - Centro</p>
+                    <p><i class="fas fa-phone"></i> Telefone: (11) 1234-5678</p>
+                    <p><i class="fas fa-envelope"></i> E-mail: contato@belstay.com</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <p>&copy; 2024 Belstay. Todos os direitos reservados.</p>
+            </div>
         </div>
-
-        <div class="box">
-          <h3>Recent News</h3>
-
-          <ul>
-            <li>Nosso passeio de barco pela Ilha Secreta é só para você</li>
-            <li>Relaxe e fuja em nossos abrigos naturais</li>
-            <li>Setembro no Hotel Luviana</li>
-            <li>Concertos de música ao vivo no Luviana</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h3>Para clientes</h3>
-          <ul>
-            <li>Sobre Luviana</li>
-            <li>Atendimento ao cliente/Ajuda</li>
-            <li>Contas Corporativas</li>
-            <li>Informações financeiras</li>
-            <li>Termos e Condições</li>
-          </ul>
-        </div>
-
-        <div class="box">
-          <h3>Contate-nos</h3>
-
-          <ul>
-            <li>3015 Grand Ave, Coconut Grove, Merrick Way FL 123456</li>
-            <li><i class="far fa-envelope"></i>demoexample@gmail.com</li>
-            <li><i class="far fa-phone-alt"></i>123 456 7898</li>
-            <li><i class="far fa-phone-alt"></i>123 456 7898</li>
-            <li><i class="far fa-comments"></i>24/ 7 Atendimento ao cliente</li>
-          </ul>
-        </div>
-      </div>
     </footer>
-  </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-KMvqHML5MZGt88obKOVaLTxy3CDPOvUwYO9e6iFhPQWo6T0Hcz0rYd/x5LvTyJg2eBYyRrL0H4/C+AOZ7Jt3q+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/main.js"></script>
+</body>
 </html>
